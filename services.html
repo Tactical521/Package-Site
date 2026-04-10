@@ -12,7 +12,7 @@ body{
   background:#100670;
   color:#fff;
   opacity:0;
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.8S ease-in-out;
 }
 
 /* MATCH HEADER */
@@ -27,13 +27,13 @@ header{
 
 .logo{font-size:1.8rem;font-weight:700;color:#4da6ff}
 
-nav a{
+nav A{
   margin-left:20px;
   color:#ccc;
   text-decoration:none;
-  transition:.3s
+  transition:.3S
 }
-nav a:hover{color:#4da6ff}
+nav A:hover{color:#4da6ff}
 
 /* MATCH HERO SIZE */
 .hero{
@@ -65,7 +65,7 @@ nav a:hover{color:#4da6ff}
   margin-bottom:20px
 }
 
-.hero p{
+.hero P{
   font-size:1.3rem; /* was 1.2rem */
   color:#ccc
 }
@@ -78,7 +78,7 @@ nav a:hover{color:#4da6ff}
   color:#000;
   font-weight:600;
   cursor:pointer;
-  transition:.3s;
+  transition:.3S;
   margin-top:20px
 }
 .btn:hover{transform:scale(1.05)}
@@ -91,7 +91,7 @@ section{
   background:rgba(0,0,0,0.5);
   border-radius:15px;
   margin-bottom:40px;
-  transition:all .5s;
+  transition:all .5S;
 }
 
 /* CARDS (unchanged) */
@@ -105,7 +105,7 @@ section{
   background:rgba(255,255,255,0.05);
   padding:25px;
   border-radius:15px;
-  transition:.3s;
+  transition:.3S;
   border:1px solid rgba(255,255,255,0.1);
   text-align:center;
   display:flex;
@@ -142,7 +142,7 @@ section{
   border-radius:15px;
 }
 
-.footer a{
+.footer A{
   color:#4da6ff;
   text-decoration:none;
   margin:0 5px
@@ -154,18 +154,18 @@ section{
 <header>
 <div class="logo">Radium Customs</div>
 <nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="#" onclick="window.open('https://discord.com','_blank')">Contact</a>
-<a href="#" onclick="window.open('https://discord.gg/xgPbjEj2fz','_blank')">Portfolio</a>
-<a href="gallery.html">Gallery</a>
+<A href="index.html">Home</A>
+<A href="services.html">Services</A>
+<A href="#" onclick="window.open('https://discord.com','_blank')">Contact</A>
+<A href="#" onclick="window.open('https://discord.gg/xgPbjEj2fz','_blank')">Portfolio</A>
+<A href="gallery.html">Gallery</A>
 </nav>
 </header>
 
 <div class="hero">
 <div class="hero-content">
 <h1>Explore Our Services</h1>
-<p>High-quality custom designs, now with Robux pricing!</p>
+<P>High-quality custom designs, now with Robux pricing!</P>
 <button class="btn" onclick="window.open('https://discord.com','_blank')">Join Discord</button>
 </div>
 </div>
@@ -188,36 +188,37 @@ section{
 
 <div class="card">
 <h2>Clothing</h2>
-<div class="price">150 R$</div>
-<div class="desc">Unique clothing and merch designs for communities and brands.</div>
+<div class="price">Prices</div>
+<div class="desc"><Li>Pants: 45+</Li><Li>Shirts: 70+</Li><Li>Set: 120+</Li></div>
 <button class="btn" onclick="window.open('https://discord.gg/pDvRE8YFgQ','_blank')">Order Now</button>
 </div>
 
 <div class="card">
 <h2>Graphics</h2>
-<div class="price">100 R$</div>
-<div class="desc">Logos, banners, and promotional graphics with high quality.</div>
+<div class="price">Prices</div>
+<div class="desc"><Li>Logos: 170+</Li>
+<Li>Banners: 100+</Li><Li>GFX: 350+</Li></div>
 <button class="btn" onclick="window.open('https://discord.gg/pDvRE8YFgQ','_blank')">Order Now</button>
 </div>
 
 <div class="card">
 <h2>Discord Servers</h2>
-<div class="price">250 R$</div>
-<div class="desc">Fully built and organized Discord servers with custom layouts.</div>
+<div class="price">Prices</div>
+<div class="desc"><Li>Server Setup: 600+</Li><Li>Embeds: 75+</Li><Li>Other: 50+</Li></div>
 <button class="btn" onclick="window.open('https://discord.gg/pDvRE8YFgQ','_blank')">Order Now</button>
 </div>
 
 <div class="card">
 <h2>Websites</h2>
-<div class="price">500 R$</div>
-<div class="desc">Modern, responsive websites to elevate your online presence.</div>
+<div class="price">Prices</div>
+<div class="desc">Websites: 700+</div>
 <button class="btn" onclick="window.open('https://discord.gg/pDvRE8YFgQ','_blank')">Order Now</button>
 </div>
 
 <div class="card">
 <h2>Bots</h2>
-<div class="price">300 R$</div>
-<div class="desc">Custom Discord bots with features tailored to your needs.</div>
+<div class="price">Prices</div>
+<div class="desc">Bots: 1000+</div>
 <button class="btn" onclick="window.open('https://discord.gg/pDvRE8YFgQ','_blank')">Order Now</button>
 </div>
 
@@ -235,11 +236,11 @@ section{
 </section>
 
 <div class="footer">
-<p>© Radium Customs (Package)</p>
+<P>© Radium Customs (Package)</P>
 <div>
-<a href="index.html">Home</a> |
-<a href="services.html">Services</a> |
-<a href="gallery.html">Gallery</a>
+<A href="index.html">Home</A> |
+<A href="services.html">Services</A> |
+<A href="gallery.html">Gallery</A>
 </div>
 </div>
 
@@ -250,8 +251,8 @@ window.addEventListener('load', () => {
 
 const links = document.querySelectorAll('.smooth-link');
 links.forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
+  link.addEventListener('click', E => {
+    E.preventDefault();
     document.body.style.opacity = '0';
     setTimeout(() => {
       window.location.href = link.href;
