@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radium Customs — Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+  background:#100670;
+  color:#fff;
+  opacity:0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* MATCH HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+}
+
+.logo{font-size:1.8rem;font-weight:700;color:#4da6ff}
+
+nav a{
+  margin-left:20px;
+  color:#ccc;
+  text-decoration:none;
+  transition:.3s
+}
+nav a:hover{color:#4da6ff}
+
+/* MATCH HERO SIZE */
+.hero{
+  height:100vh; /* changed from 60vh */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:url('file:///C:/Users/jacki/Downloads/image.png') center/cover no-repeat;
+  position:relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6)
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:800px
+}
+
+/* MATCH TEXT SIZE */
+.hero h1{
+  font-size:4rem; /* was 3.5rem */
+  margin-bottom:20px
+}
+
+.hero p{
+  font-size:1.3rem; /* was 1.2rem */
+  color:#ccc
+}
+
+.btn{
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  background:#4da6ff;
+  color:#000;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+  margin-top:20px
+}
+.btn:hover{transform:scale(1.05)}
+
+/* MATCH SECTION STYLE */
+section{
+  padding:80px 20px; /* was 60px */
+  max-width:1200px;
+  margin:auto;
+  background:rgba(0,0,0,0.5);
+  border-radius:15px;
+  margin-bottom:40px;
+  transition:all .5s;
+}
+
+/* CARDS (unchanged) */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:15px;
+  transition:.3s;
+  border:1px solid rgba(255,255,255,0.1);
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 10px 30px rgba(77,166,255,0.3)
+}
+
+.card h2{margin-bottom:10px}
+
+.price{
+  font-size:2rem;
+  color:#ffce00;
+  margin:10px 0
+}
+
+.desc{
+  color:#bbb;
+  margin-bottom:20px;
+  flex-grow:1
+}
+
+/* MATCH FOOTER */
+.footer{
+  padding:30px;
+  text-align:center;
+  color:#777;
+  background:rgba(0,0,0,0.6); /* was solid */
+  margin-top:50px;
+  border-radius:15px;
+}
+
+.footer a{
+  color:#4da6ff;
+  text-decoration:none;
+  margin:0 5px
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Radium Customs</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="#" onclick="window.open('https://discord.com','_blank')">Contact</a>
+<a href="#" onclick="window.open('https://discord.gg/xgPbjEj2fz','_blank')">Portfolio</a>
+<a href="gallery.html">Gallery</a>
+</nav>
+</header>
+
+<div class="hero">
+<div class="hero-content">
+<h1>Explore Our Services</h1>
+<p>High-quality custom designs, now with Robux pricing!</p>
+<button class="btn" onclick="window.open('https://discord.com','_blank')">Join Discord</button>
+</div>
+</div>
+<br>
+<br>
+<section>
+<h2 style="text-align:center;margin-bottom:40px">Services & Pricing</h2>
+<div class="cards">
+
+<div class="card">
+<h2>Liveries</h2>
+<div class="price"> Prices</div>
+<div class="desc">
+<li>LEO: 155+ R$</li>
+<li>FD: 180+ R$</li>
+<li>Misc: 100+ R$</li>
+</div>
+<button class="btn" onclick="window.open('https://discord.gg/pDvRE8YFgQ','_blank')">Order Now</button>
+</div>
+
+<div class="card">
+<h2>Clothing</h2>
+<div class="price">150 R$</div>
+<div class="desc">Unique clothing and merch designs for communities and brands.</div>
+<button class="btn" onclick="window.open('https://discord.gg/pDvRE8YFgQ','_blank')">Order Now</button>
+</div>
+
+<div class="card">
+<h2>Graphics</h2>
+<div class="price">100 R$</div>
+<div class="desc">Logos, banners, and promotional graphics with high quality.</div>
+<button class="btn" onclick="window.open('https://discord.gg/pDvRE8YFgQ','_blank')">Order Now</button>
+</div>
+
+<div class="card">
+<h2>Discord Servers</h2>
+<div class="price">250 R$</div>
+<div class="desc">Fully built and organized Discord servers with custom layouts.</div>
+<button class="btn" onclick="window.open('https://discord.gg/pDvRE8YFgQ','_blank')">Order Now</button>
+</div>
+
+<div class="card">
+<h2>Websites</h2>
+<div class="price">500 R$</div>
+<div class="desc">Modern, responsive websites to elevate your online presence.</div>
+<button class="btn" onclick="window.open('https://discord.gg/pDvRE8YFgQ','_blank')">Order Now</button>
+</div>
+
+<div class="card">
+<h2>Bots</h2>
+<div class="price">300 R$</div>
+<div class="desc">Custom Discord bots with features tailored to your needs.</div>
+<button class="btn" onclick="window.open('https://discord.gg/pDvRE8YFgQ','_blank')">Order Now</button>
+</div>
+
+</div>
+</section>
+
+<section style="text-align:center;margin-top:60px">
+<h2>Why Choose Radium Customs?</h2>
+<ul style="list-style:none;margin-top:30px;color:#bbb;max-width:700px;margin-left:auto;margin-right:auto;line-height:2">
+<li>Professional & responsive designers</li>
+<li>Fast delivery with high quality</li>
+<li>Fully customized based on your vision</li>
+<li>Supportive community & Discord help</li>
+</ul>
+</section>
+
+<div class="footer">
+<p>© Radium Customs (Package)</p>
+<div>
+<a href="index.html">Home</a> |
+<a href="services.html">Services</a> |
+<a href="gallery.html">Gallery</a>
+</div>
+</div>
+
+<script>
+window.addEventListener('load', () => {
+  document.body.style.opacity = '1';
+});
+
+const links = document.querySelectorAll('.smooth-link');
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+      window.location.href = link.href;
+    }, 500);
+  });
+});
+</script>
+
+</body>
+</html>

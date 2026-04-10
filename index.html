@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radium Customs — Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background: #100670;
+  color: #fff;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+
+}
+
+.logo { font-size: 1.8rem; font-weight: 700; color: #4da6ff; }
+
+nav a {
+  margin-left: 20px;
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav a:hover { color: #4da6ff; }
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: url('file:///C:/Users/jacki/Downloads/image.png') center/cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 { font-size: 4rem; margin-bottom: 20px; }
+.hero p { font-size: 1.3rem; margin-bottom: 30px; color: #ccc; }
+
+/* BUTTON */
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background: #4da6ff;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover { transform: scale(1.05); }
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(0,0,0,0.5);
+  border-radius: 15px;
+  margin-bottom: 40px;
+  transition: all 0.5s;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(77,166,255,0.3);
+}
+
+.card p { color: #bbb; }
+
+/* FOOTER */
+.footer {
+  padding: 30px;
+  text-align: center;
+  color: #777;
+  background: rgba(0,0,0,0.6);
+  margin-top: 50px;
+  border-radius: 15px;
+}
+.footer a { color: #4da6ff; text-decoration: none; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Radium Customs</div>
+  <nav>
+    <a href="index.html" class="smooth-link">Home</a>
+    <a href="services.html" class="smooth-link">Services</a>
+    <a href="#" onclick="window.open('https://discord.com','_blank')">Contact</a>
+    <a href="#" onclick="window.open('https://discord.gg/xgPbjEj2fz','_blank')">Portfolio</a>
+    <a href="gallery.html" class="smooth-link">Gallery</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>Design That Stands Out</h1>
+    <p>Custom Liveries, Clothing, and graphics built to elevate your server!</p>
+    <button class="btn" onclick="window.open('https://discord.com','_blank')">Join Discord</button>
+  </div>
+</div>
+<br>
+<br>
+<section>
+  <h2 style="text-align:center;margin-bottom:40px">Our Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Liveries</h3>
+      <p>Custom vehicle liveries designed to match your brand.</p>
+    </div>
+    <div class="card">
+      <h3>Clothing</h3>
+      <p>Unique clothing designs and merch concepts.</p>
+    </div>
+    <div class="card">
+      <h3>Graphics</h3>
+      <p>High-quality banners, logos, and visuals.</p>
+    </div>
+  </div>
+</section>
+
+<section style="text-align:center;">
+  <h2>Why Choose Radium Customs?</h2>
+  <ul style="list-style:none;margin-top:30px;color:#bbb;max-width:700px;margin:auto;line-height:2">
+    <li>Professional designers</li>
+    <li>Fast delivery</li>
+    <li>Fully customized</li>
+    <li>Strong community support</li>
+  </ul>
+</section>
+
+<div class="footer">
+  <p>© Radium Customs</p>
+</div>
+
+<script>
+window.addEventListener('load', () => {
+  document.body.style.opacity = '1';
+});
+</script>
+
+</body>
+</html>

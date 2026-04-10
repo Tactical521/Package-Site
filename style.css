@@ -1,0 +1,81 @@
+body {
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  background:#000;
+  color:white;
+}
+
+header {
+  display:flex;
+  justify-content:space-between;
+  padding:15px 40px;
+  background:rgba(0,0,50,0.7);
+  position:fixed;
+  width:100%;
+  z-index:100;
+}
+
+nav a {
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover {
+  color:#66b3ff;
+}
+
+.page {
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background-size:cover;
+  background-position:center;
+  animation:bgZoom 20s infinite alternate;
+  position:relative;
+}
+
+.overlay {
+  position:absolute;
+  inset:0;
+  background:rgba(0,20,60,0.6);
+}
+
+.content {
+  position:relative;
+  z-index:2;
+}
+
+h1 {
+  color:#4da6ff;
+  text-shadow:0 0 20px #0066ff;
+}
+
+.btn {
+  padding:12px 25px;
+  background:linear-gradient(45deg,#0066ff,#00ccff);
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+.cards {
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card {
+  padding:20px;
+  background:rgba(255,255,255,0.1);
+  border-radius:10px;
+}
+
+@keyframes bgZoom {
+  from { background-size:100%; }
+  to { background-size:110%; }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radium Package — Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;transition:all 0.5S ease-in-out}
+body{background:#0a0f1c;color:#fff;opacity:0;transition:opacity 0.8S ease-in-out}
+
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);position:fixed;width:100%;z-index:1000}
+.logo{font-size:1.8rem;font-weight:700;color:#4da6ff}
+nav A{margin-left:20px;color:#ccc;text-decoration:none;transition:color 0.3S}
+nav A:hover{color:#4da6ff}
+
+section{padding:80px 20px;max-width:1200px;margin:auto;transition:all 0.5S}
+h1,h2{text-align:center;margin-bottom:40px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:rgba(255,255,255,0.05);padding:15px;border-radius:15px;transition:all 0.3S;border:1px solid rgba(255,255,255,0.1);text-align:center;cursor:pointer}
+.card img{width:100%;height:250px;object-fit:cover;border-radius:10px;margin-bottom:10px;transition:transform 0.3S ease}
+.card:hover img{transform:scale(1.05)}
+.card P{color:#bbb;margin-top:5px}
+.card:hover{transform:translateY(-10px);box-shadow:0 10px 30px rgba(77,166,255,0.3)}
+.footer{padding:30px;text-align:center;color:#777;background:#050810;margin-top:50px}
+.footer A{color:#4da6ff;text-decoration:none;margin:0 5px}
+.btn{padding:10px 20px;border:none;border-radius:20px;background:#4da6ff;color:#000;font-weight:600;cursor:pointer;transition:transform 0.3S;margin-top:10px}
+.btn:hover{transform:scale(1.05)}
+
+/* Lightbox */
+#lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);justify-content:center;align-items:center;z-index:5000;cursor:zoom-out}
+#lightbox img{max-width:90%;max-height:90%;object-fit:contain;transition:transform 0.3S ease}
+#lightbox img:hover{transform:scale(1.2)}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Radium Package</div>
+<nav>
+<a href="index.html" class="smooth-link">Home</a>
+<a href="services.html" class="smooth-link">Services</a>
+<a href="#" onclick="window.open('https://discord.com','_blank')">Contact</a>
+<a href="#" onclick="window.open('https://discord.gg/xgPbjEj2fz','_blank')">Portfolio</a>
+<a href="gallery.html" class="smooth-link">Gallery</a>
+</nav>
+</header>
+<br><br>
+
+<section>
+<h1>Gallery</h1>
+<h2>Best Creations</h2>
+<div class="cards">
+
+<div class="card">
+<img src="https://duskys-portfolio.carrd.co/assets/images/gallery01/73a9cc46.jpg?v=be473f83" alt="Livery Example">
+<p>Custom Livery — Made by DuskyTheScam <br>(You may not use this Image)</p>
+</div>
+
+<div class="card">
+<img src="https://cadettesportfolio.carrd.co/assets/images/gallery02/d8568e34_original.jpg?v=b809d872" alt="Clothing Example">
+<p>Clothing Design — Made by Cadettee <br>(You may not use this Image)</p>
+</div>
+
+<div class="card">
+<img src="https://duskys-portfolio.carrd.co/assets/images/gallery04/4b60d66f.jpg?v=be473f83" alt="Graphic Example">
+<p> Graphic — Made by DuskyTheScam <br>(You may not use this Image)</p>
+</div>
+
+<div class="card">
+<img src="https://duskys-portfolio.carrd.co/assets/images/gallery05/15d999b3.jpg?v=be473f83" alt="Discord Embed">
+<p>Discord Embed — Made by DuskyTheScam <br>(You may not use this Image)</p>
+</div>
+
+<div class="card">
+<img src="https://foreversshowcase.carrd.co/assets/images/gallery03/59f824c5.jpg?v=8ac85831" alt="Website Example">
+<p>Website Design — Made by ForeverPurple909</p>
+</div>
+
+<div class="card">
+<img src="https://media.discordapp.net/attachments/1411029687437885510/1411029896402305064/image.png?ex=69d929fe&is=69d7d87e&hm=246cfe1ea2a6bd0bbb0959ff50d50a7b4f48b4e1e54c58381ce508e71748dcab&=&format=webp&quality=lossless&width=714&height=480" alt="Bot Interface">
+<p>Custom Bot — Made by Subscribe_Tomy3 <br>(You may not use this Image)</p>
+</div>
+
+</div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+<img id="lightbox-img" src="">
+</div>
+
+<div class="footer">
+<p>© Radium Customs (Package)</p>
+<div>
+<a href="index.html" class="smooth-link">Home</a> |
+<a href="services.html" class="smooth-link">Services</a> |
+<a href="gallery.html" class="smooth-link">Gallery</a>
+</div>
+</div>
+
+<script>
+// Page fade-in and smooth link transition
+window.addEventListener('load',()=>{document.body.style.opacity='1'});
+const links=document.querySelectorAll('.smooth-link');
+links.forEach(link=>{
+ link.addEventListener('click',e=>{
+   e.preventDefault();
+   document.body.style.opacity='0';
+   setTimeout(()=>{window.location.href=link.href},500);
+ });
+});
+
+// Lightbox functionality
+const cards = document.querySelectorAll('.card img');
+cards.forEach(img => {
+  img.addEventListener('click', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  });
+});
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
